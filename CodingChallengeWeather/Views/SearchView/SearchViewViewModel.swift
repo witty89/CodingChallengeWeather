@@ -120,6 +120,13 @@ extension SearchViewViewModel {
     // first request permission
     func fetchLocation() {
         locationManager.getLocation { [weak self] location in
+            
+            /* it's getting
+            (lldb) po location
+            ▿ Optional<CLLocation>
+              - some : <+40.41658202,-111.86003394> +/- 4.76m (speed 0.00 mps / course -1.00) @ 8/24/24, 5:49:01 PM Mountain Daylight Time
+             */
+            
             if let location = location {
                 DispatchQueue.main.async {
                     self?.location = location

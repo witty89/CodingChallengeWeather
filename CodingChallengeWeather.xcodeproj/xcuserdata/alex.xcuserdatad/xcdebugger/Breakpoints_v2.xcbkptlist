@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "546892F3-DA2C-4369-A40E-609C3B6086E7"
+            uuid = "2F2F2E18-5D1F-4EE7-B353-DA8FEE2DAFD0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CodingChallengeWeather/Views/SearchView/SearchView.swift"
+            filePath = "CodingChallengeWeather/Views/SearchView/SearchViewViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "useMyLocationButton()"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "fetchAddress(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
