@@ -6,30 +6,24 @@
 //
 
 import XCTest
+@testable import CodingChallengeWeather
 
 final class CodingChallengeWeatherTests: XCTestCase {
+    func testConvertTemp() {
+        let viewModel = DetailViewViewModel(location: SimpleLocation(city: "TestCity", state: nil, country: "TestCountry"))
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        // Kelvin to Fahrenheit
+        let fahrenheitResult = viewModel.convertTemp(temp: 300, from: .kelvin, to: .fahrenheit)
+        XCTAssertEqual(fahrenheitResult, "80.33°F", "Conversion from Kelvin to Fahrenheit is incorrect")
+
+        // Kelvin to Celsius
+        let celsiusResult = viewModel.convertTemp(temp: 300, from: .kelvin, to: .celsius)
+        XCTAssertEqual(celsiusResult, "26.85°C", "Conversion from Kelvin to Celsius is incorrect")
+
+        //
+        let neg40Result = viewModel.convertTemp(temp: -40, from: .fahrenheit, to: .celsius)
+        XCTAssertEqual(neg40Result, "-40°C", "Conversion from Fahrenheit to Celsius is incorrect")
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
+    
 }

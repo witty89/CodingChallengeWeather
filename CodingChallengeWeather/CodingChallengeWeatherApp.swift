@@ -40,14 +40,14 @@ struct CodingChallengeWeatherApp: App {
  Search Screen
  ✅︎ Allow customers to enter a US city
  ✅︎ Call the openweathermap.org API and display the information you think a user would be interested in seeing. Be sure to has the app download and display a weather icon.
- Have image cache if needed
- Auto-load the last city searched upon app launch.
- Ask the User for location access, If the User gives permission to access the location, then retrieve weather data by default
- Do no use external framework
+ Have image cache if needed ✅︎ not needed, the image request is quick enough, I'd rather make that request each time and keep the app as lightweight as possible, but would be a good team discussion
+ ✅︎ Auto-load the last city searched upon app launch.
+ ✅︎ Ask the User for location access, If the User gives permission to access the location, then retrieve weather data by default
+ ✅︎Do no use external framework
  */
 
 /*
- What is Important
+ What is Important (subjective, but I feel good about these)
  Proper function – requirements met.
  Well-constructed, easy-to-follow, commented code (especially comment hacks or workarounds made in the interest of expediency (i.e. // given more time I would prefer to wrap this in a blah blah blah pattern blah blah )).
  Proper separation of concerns and best-practice coding patterns.
@@ -56,11 +56,11 @@ struct CodingChallengeWeatherApp: App {
 
 /*
  Bonus Points!
- Unit Tests
+ Unit Tests ✅︎
  Good design (I know I said it was less important, but what I mean is I don't want a beautiful, poorly constructed app).
- Industry-standard design pattern adoption (MVVM, VIPER, MVI)
- Adoption of SOLID principles.
- Additional functionality – whatever you see fit.
+ Industry-standard design pattern adoption (✅︎MVVM, VIPER, MVI)
+ Adoption of SOLID principles.✅︎
+ Additional functionality – whatever you see fit. ✅︎ Refresh, Conversion C to F
  */
 
 
